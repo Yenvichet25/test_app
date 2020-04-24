@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:shoes_app/pages/product_banner.dart';
 
 class NikePage extends StatefulWidget {
   @override
@@ -13,7 +14,6 @@ class _NikePageState extends State<NikePage> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        physics: ScrollPhysics(),
         child: Column(
           children: <Widget>[
             Container(
@@ -35,8 +35,7 @@ class _NikePageState extends State<NikePage> {
                               end: Alignment.bottomLeft),
                           boxShadow: [
                             BoxShadow(
-                                offset: Offset(0, 8),
-                                color: Colors.black.withOpacity(0.3),
+                                color: Colors.black.withOpacity(0.5),
                                 blurRadius: 8)
                           ]),
                       child: Stack(
@@ -116,6 +115,8 @@ class _NikePageState extends State<NikePage> {
                 },
               ),
             ),
+            SizedBox(height: 20,),
+            ProductBanner()
           ],
         ),
       ),
